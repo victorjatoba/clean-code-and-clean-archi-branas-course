@@ -1,0 +1,18 @@
+{
+    "name": "branas-class-01",
+    "version": "1.0.0",
+    "description": "Clean Code e Clean Architecture course",
+    "main": "index.js",
+    "scripts": {
+        "tsc:init": "tsc --init",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "typescript": "^4.3.5"
+    },
+    "devDependencies": {
+        "jest": "^27.0.6"
+    }
+}
