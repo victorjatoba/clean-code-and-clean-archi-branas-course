@@ -1,11 +1,16 @@
+import CurrencyAPI from "./CurrencyAPI";
+
 export default class Account {
   private balance: number;
 
-  constructor(balance: number) {
-    this.balance = balance;
+  constructor(readonly currencyAPI: CurrencyAPI) {
+    this.balance = 0;
   }
 
-  credit(amount: number): void {
+  credit(amount: number, currency?: string): void {
+    if (currency) {
+      amount = this.currencyAPI.convert(amount, currency);
+    }
     this.balance += amount;
   }
 
