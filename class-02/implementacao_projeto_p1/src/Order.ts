@@ -17,7 +17,7 @@ export default class Order {
 
   public getTotal(): number {
     const total = this.orderItems.reduce(
-      (sum, orderItem) => sum + orderItem.price * orderItem.quantity,
+      (sum, orderItem) => sum + orderItem.getTotal(),
       0
     );
     return total;
