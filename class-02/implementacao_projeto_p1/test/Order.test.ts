@@ -42,3 +42,19 @@ test("Deve criar um pedido com 3 itens", () => {
   const total = order.getTotal();
   expect(total).toBe(60);
 });
+
+test("Deve criar uma venda com cupom de desconto", () => {
+  const cpf = "487.501.680-88";
+  const order = new Order(cpf);
+  order.addItem(
+    {
+      id: "1",
+      name: "Item 1",
+      price: 10,
+    },
+    1
+  );
+  order.addCoupon("10OFF");
+  const total = order.getTotal();
+  expect(total).toBe(9);
+});
