@@ -1,6 +1,6 @@
 export default class OrderItem {
   constructor(
-    readonly itemId: string,
+    readonly itemId: number,
     readonly price: number,
     readonly quantity: number = 1
   ) {}
